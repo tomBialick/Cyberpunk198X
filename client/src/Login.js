@@ -81,14 +81,14 @@ class Login extends Component {
   signInOrCreateAccount() {
     if (this.state.hasAccount) {
       return (
-        <div id="login-area">
-          <label>Username:
+        <div id="login_area">
+          <div id="login_creds_area">
+            <label className="login_area_text">Username:</label>
             <input type="text" onChange={this.usernameChange}/>
-          </label>
-          <br />
-          <label>Password:
+            <label className="login_area_text">Password:</label>
             <input type="password" onChange={this.passwordChange}/>
-          </label><br />
+          </div>
+          <br />
           <button onClick={(e) => this.handleSignIn(e)}>Login</button>
           <button onClick={(e) => this.handleCreateAccount(e)}>Create Account</button>
         </div>

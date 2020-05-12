@@ -19,7 +19,7 @@ class GameRoom extends Component {
   render() {
     return (
       <div>
-        <h1>Cyberpunk198X</h1>
+        <h3>Welcome to Cyberpunk198X</h3>
         <button onClick={(e) => this.handleLogout(e)}>Logout</button>
       </div>
     )

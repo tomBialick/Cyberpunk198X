@@ -29,7 +29,16 @@ class App extends Component {
       return <GameRoom hosturl={this.state.hosturl} username={this.state.username} role={this.state.role} logout={this.handleLogout} />
     }
     else {
-      return <Login hosturl={this.state.hosturl} auth={this.handleLogin} />
+      return (
+        <div id="login_container">
+          <div id="login_greeting">
+            <h1>Cyberpunk198X</h1>
+          </div>
+          <div className="spacer">
+          </div>
+          <Login hosturl={this.state.hosturl} auth={this.handleLogin} />
+        </div>
+      )
     }
   }
 
