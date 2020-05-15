@@ -10,6 +10,7 @@ const sessionSecret = require('./auth/sessionSecret.json')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var playerRouter = require('./routes/player');
 
 var app = express();
 
@@ -60,5 +61,6 @@ var sessionChecker = (req, res, next) => {
 
 app.use('/', sessionChecker, indexRouter);
 app.use('/users', usersRouter);
+app.use('/player', playerRouter);
 
 module.exports = app;

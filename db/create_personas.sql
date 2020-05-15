@@ -8,6 +8,7 @@ DROP TABLE PERSONAS;
 CREATE TABLE PERSONAS(
       PERSONA_ID                INT          NOT NULL,
       USERNAME                  VARCHAR(255) NOT NULL,
+      PERSONA_NAME              VARCHAR(255) NOT NULL,
       NPC_FLAG                  BOOLEAN      NOT NULL,
       HEALTH                    INT,
       SUPERB_SKILL              VARCHAR(255),
@@ -24,5 +25,6 @@ CREATE TABLE PERSONAS(
       ATTACHMENT_NAME           VARCHAR(255),
       ATTACHMENT_LOCATION       VARCHAR(255),
       NOTES                     VARCHAR(255),
+      INVENTORY                 VARCHAR(255),
       PRIMARY KEY (PERSONA_ID)
 );

@@ -13,5 +13,6 @@ mkdir auth
 echo "{
   \"secret\" : \""${SECRET}"\"
 }" > ./auth/sessionSecret.json
+mkdir resources
 
 exit 0
