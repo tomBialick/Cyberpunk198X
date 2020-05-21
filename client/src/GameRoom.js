@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './sheets/GameRoom.css';
+import CreateCharacter from './CreateCharacter.js'
 
 class GameRoom extends Component {
   constructor(props) {
@@ -8,16 +9,19 @@ class GameRoom extends Component {
     this.state = {
       game: "",
       isPlayer: (this.props.role === "player"),
-      characterList: []
+      characterList: [],
+      menuChoice: ""
     }
     this.handleLogout = this.handleLogout.bind(this);
     this.playerOrGMContent = this.playerOrGMContent.bind(this);
+    this.handleGoBack = this.handleGoBack.bind(this);
+    this.handleCreateCharacter = this.handleCreateCharacter.bind(this);
   }
 
   componentDidMount() {
     if (this.state.isPlayer) {
       //fetch their characters
-      fetch(this.state.hosturl + '/player/chars', {
+      fetch(this.props.hosturl + '/player/chars', {
         method: 'GET',
         credentials: 'same-origin',
         headers: {
@@ -40,7 +44,7 @@ class GameRoom extends Component {
       })
     }
     else {
-
+      console.log("ur a gm");
     }
   }
 
@@ -49,12 +53,38 @@ class GameRoom extends Component {
     this.props.logout();
   }
 
+  handleGoBack() {
+    this.setState({menuChoice: ""})
+  }
+
+  handleCreateCharacter(event) {
+    event.preventDefault();
+    this.setState({menuChoice: "create character"})
+  }
+
   playerOrGMContent() {
     if (this.state.isPlayer) {
-
+      if (this.state.menuChoice === "create character") {
+        return (
+          <CreateCharacter hosturl={this.state.hosturl} username={this.state.username} role={this.state.role} goBack={this.handleGoBack} />
+        )
+      }
+      else {
+        return (
+          <div id="player_gameroom_content">
+            <button onClick={(e) => this.handleCreateCharacter(e)}>Create Character</button>
+            <br />
+            <p>{this.state.characterList}</p>
+          </div>
+        )
+      }
     }
     else {
-
+      return (
+        <div id="player_gameroom_content">
+          <p>ur a gm</p>
+        </div>
+      )
     }
   }
 
@@ -64,7 +94,7 @@ class GameRoom extends Component {
         <h3>Welcome to Cyberpunk198X</h3>
         <button id="logout_button" onClick={(e) => this.handleLogout(e)}>Logout</button>
         <div className="spacer">
-        <div>
+        </div>
         {this.playerOrGMContent()}
       </div>
     )
