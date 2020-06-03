@@ -1,0 +1,29 @@
+#create_character_div {
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+#create_character_skill_info_div {
+  overflow-y: scroll;
+  max-height: 77vh;
+  text-align: left;
+}
+
+#create_character_form_div label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  text-align: right;
+  width: 30%;
+}
+
+#create_character_form_div input {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+
+#create_character_form_div select {
+  display: inline-block;
+  float: left;
+}

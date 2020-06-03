@@ -66,14 +66,15 @@ class GameRoom extends Component {
     if (this.state.isPlayer) {
       if (this.state.menuChoice === "create character") {
         return (
-          <CreateCharacter hosturl={this.state.hosturl} username={this.state.username} role={this.state.role} goBack={this.handleGoBack} />
+          <CreateCharacter hosturl={this.props.hosturl} username={this.props.username} role={this.props.role} goBack={this.handleGoBack} />
         )
       }
       else {
         return (
           <div id="player_gameroom_content">
             <button onClick={(e) => this.handleCreateCharacter(e)}>Create Character</button>
-            <br />
+            <div className="spacer">
+            </div>
             <p>{this.state.characterList}</p>
           </div>
         )

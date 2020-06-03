@@ -57,7 +57,7 @@ class App extends Component {
       }).then(response => {
         if (response.status < 400) {
           response.json().then(responseJson => {
-            this.setState({isLoggedIn: true, username: responseJson.body.username, role: responseJson.body.role})
+            this.setState({isLoggedIn: true, username: responseJson.body.results.username, role: responseJson.body.results.role})
             return true
           })
         }
