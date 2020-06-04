@@ -9,6 +9,11 @@
   text-align: left;
 }
 
+#create_character_form_div {
+  display: grid;
+  grid-template-rows: 80% auto;
+}
+
 #create_character_form_div label {
   display: inline-block;
   float: left;
@@ -23,7 +28,21 @@
   width: 50%;
 }
 
+#create_character_form_div textarea {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  font-family: inherit;
+}
+
 #create_character_form_div select {
   display: inline-block;
   float: left;
+}
+
+#create_character_create_button {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
