@@ -219,9 +219,9 @@ router.get('/skills', function(req, res, next) {
         name: "Computers",
         desc: "Cue the \"I'm in\" voice. This is the digital version of Mechanics. Hacking, programming, specialized computer knowledge, understanding how exactly a compiler works (and not just to pass that CS theory course). Hopefully this is balanced since it's not from Fate Core, since I wanted to split mechanical knowledge from computer knowledge (it pains me to put all computer knowledge as one skill)",
         overcome: "Bypassing electronic security, investigate databases (although highly unrealistic if you had no prior knowledge of the data), digital forensics, writing scripts, execute a tar command flawlessly on your first try, general hacking other people's computers, etc.",
-        advantage: "",
+        advantage: "With this skill, you can act like it's NCIS or really any crappy cop show. Stop a hacker in real time by mashing the keys harder? Sure why not. Zoom in, Enhance, Enhance again, Zoom in, and Enhance yet again on corrupted data? Totally. Even if that wasn't an image but actually a JSON file. Any advantage you need behind a monitor, use this skill.",
         attack: "Unless you are fighting a giant robot while trying to control it with a remote or terminal, this won't help attack",
-        defend: "Unless you are inside the giant robot you are fighting, this won't help defense",
+        defend: "Unless you are inside trying to control the giant robot you are fighting, this won't help defense",
         stunts: [
           {
             name: "Upload the Download Streams",

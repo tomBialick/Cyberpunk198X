@@ -26,6 +26,7 @@
   display: inline-block;
   float: left;
   width: 50%;
+  margin-left: 3px;
 }
 
 #create_character_form_div textarea {
@@ -33,11 +34,13 @@
   float: left;
   width: 50%;
   font-family: inherit;
+  margin-left: 3px;
 }
 
 #create_character_form_div select {
   display: inline-block;
   float: left;
+  margin-left: 3px;
 }
 
 #create_character_create_button {
@@ -45,4 +48,12 @@
   margin-right: 10%;
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+#create_character_form_div p {
+  display: inline-block;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 3px;
 }
